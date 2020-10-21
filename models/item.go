@@ -9,6 +9,6 @@ type Item struct {
 	TransactionItem []TransactionItem
 	ItemName        string `sql:"type:varchar(250);"`
 	Quantity        int
-	Price           float32 `sql:"type:decimal(10,2);"`
+	Price           float64 `sql:"type:decimal(10,2);"`
 	InfoDesc        string  `sql:"type:longtext;"`
 }
