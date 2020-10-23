@@ -24,7 +24,10 @@ func main() {
 			sewaAset.PUT("/users/:id", middleware.IsAuth(), routes.UpdateUser)    // /api/v1/sewaAset/users/:id
 			sewaAset.DELETE("/users/:id", middleware.IsAuth(), routes.DeleteUser) // /api/v1/sewaAset/users/:id
 
-			sewaAset.POST("/items", middleware.IsAuth(), routes.PostItem) // /api/v1/sewaAset/items
+			sewaAset.POST("/items", middleware.IsAuth(), routes.PostItem)         // /api/v1/sewaAset/items
+			sewaAset.GET("/items", middleware.IsAuth(), routes.GetItems)          // /api/v1/sewaAset/items
+			sewaAset.PUT("/items/:id", middleware.IsAuth(), routes.UpdateItem)    // /api/v1/sewaAset/items/:id
+			sewaAset.DELETE("/items/:id", middleware.IsAuth(), routes.DeleteItem) // /api/v1/sewaAset/items/:id
 		}
 	}
 
